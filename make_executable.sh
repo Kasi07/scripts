@@ -3,7 +3,7 @@
 # Function to make scripts executable
 make_executable() {
     for file in $1; do
-        if [[ -f "$file" ]]; then
+        if [[ -f "$file" && ! -x "$file" ]]; then
             chmod +x "$file"
             echo "Made executable: $file"
         fi
