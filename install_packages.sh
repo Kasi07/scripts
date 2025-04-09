@@ -11,6 +11,9 @@ detect_package_manager() {
     # Check for Arch Linux (pacman)
     elif command -v pacman &> /dev/null; then
         echo "pacman"
+    # Check for Opensuse (zypper)
+    elif command -v zypper &> /dev/null; then
+        echo "zypper"
     # Add more package managers/distributions if needed
     else
         echo "Unknown"
